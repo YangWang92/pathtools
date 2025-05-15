@@ -24,7 +24,7 @@
 import os
 import importlib.util
 import importlib.machinery
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 PKG_DIR = 'pathtools'
 
@@ -72,5 +72,6 @@ setup(name='pathtools',
           'Topic :: System :: Filesystems',
           'Topic :: Utilities',
           ],
-      packages=['pathtools']
+      packages=find_packages(),
+      python_requires='>=3.6',
       )
